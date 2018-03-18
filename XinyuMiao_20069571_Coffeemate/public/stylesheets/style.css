@@ -1,0 +1,65 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+
+.jumbotron h1, .jumbotron .h1{
+    color:#063C63;
+
+}
+
+a {
+  color: #063C63;
+}
+
+
+
+h3 {
+    font-size: 24px;
+    font-size: xx-large;
+    font-family: fantasy;
+    color: #063C63;
+}
+
+
+.gi-3x{font-size: 3em;}
+
+
+.navbar-inverse {
+   background-color: #063C63;
+   border-color: #063C63;
+}
+
+
+.favourite-true{
+    color: #063C63;
+}
+
+.favourite-false{
+    color: gray;
+}
+
+.starRating {
+    margin: 0;
+    padding: 0;
+    color: gray;
+}
+
+
+.starRating li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 3px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.starRating .filled {
+    color: #063C63;
+}
+
+.jumbotron{
+    background-color: lightblue;
+}

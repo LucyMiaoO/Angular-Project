@@ -1,0 +1,16 @@
+<div class="jumbotron text-center">
+    <h1>What do you think about this coffeemate?</h1>
+
+    <div ng-controller="addcomController">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+
+                <br/>
+                <label>Make the comment</label>
+                <textarea class="form-control" align="center" type="String" ng-model="content"  placeholder = "leave your content here"></textarea>
+                <br/>
+                <button type="submit" class="btn btn-primary" ng-click='addcom(content)'>Submit</button>
+                <button class="btn btn-info"><a href="#comments">View Comments</a></button>
+            </div>
+        </div>
+    </div>

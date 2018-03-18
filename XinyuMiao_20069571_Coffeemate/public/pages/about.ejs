@@ -1,0 +1,28 @@
+<div class="jumbotron text-center">
+    <h1>About Us</h1>
+
+    <h2>{{ message }}</h2>
+  <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+          <label>Put your rating here</label>
+          <div ng-init="rating = star.rating + 1"></div>
+          <div class="gi-3x" star-rating rating-value="rating" data-max="5"></div>
+      </div>
+
+      <div class="col-md-12">
+          <div class="col-md-6">
+              <br/>
+              <img src="./images/cake.jpg" style="width: 450px;
+                     height:270px;" >
+
+          </div>
+          <div class="col-md-6">
+              <br/>
+              <br/>
+              <br/>
+              <h3>Thank you for joining our website to share your favourite coffeemates! You can give your rating in this page about our website and if you have any reviews we are pleased to receive your email.</h3>
+
+          </div>
+      </div>
+
+</div>

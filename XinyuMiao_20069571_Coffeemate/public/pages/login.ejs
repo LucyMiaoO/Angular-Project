@@ -1,0 +1,27 @@
+<div class="jumbotron text-center">
+    <h1>Log in</h1>
+
+    <p>{{ message }}</p>
+
+    <div ng-controller="loginController">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <br/>
+                <label>Email</label>
+                <div class="form-group" align="center">
+                    <input type="String" ng-model="useremail"  placeholder="Your name"  class="form-control" ng-style="{'width': 300 + 'px'}">
+                    </input>
+                    <br/>
+                    <label>Password</label>
+                    <div class="form-group" align="center">
+                        <input type="Password" ng-model="userpassword"  placeholder="Your password"  class="form-control" ng-style="{'width': 300 + 'px'}">
+                        </input>
+                    </div>
+
+                <button type="submit" class="btn btn-primary" ng-click='login(useremail,userpassword)'>Sign in</button>
+                        <a href="#register"> <button type="button" class="btn btn-default navbar-btn btn-success">Sign up</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

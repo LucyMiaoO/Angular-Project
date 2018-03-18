@@ -1,0 +1,44 @@
+<div class="jumbotron text-center">
+	<h1>List All Coffeemates</h1>
+	
+	<p>{{ message }}</p>
+
+  <div ng-controller="coffeematesController as list">
+	<table align="center" valign="middle">
+	  <tbody ng-repeat="coffeemate in coffeemates | orderBy:'-upvotes'">
+        <tr style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle"; >
+        	<td>
+                <button type="button" class="btn btn-default">
+                    {{coffeemate.upvotes}}
+                    <span class="glyphicon glyphicon-star" ng-click="incrementUpvotes(coffeemate._id)"></span>
+                </button>
+            </td>
+            <td>
+                 &nbsp;<span>{{coffeemate.name}}</span>&nbsp;
+         	</td>
+            <td>
+                 &nbsp;<span>{{coffeemate.coffeeshop}}</span>&nbsp;
+            </td>
+            <td>
+            <span class="glyphicon glyphicon-euro"></span>
+            {{coffeemate.amount}}
+    		</td>
+ 			<td>
+
+        <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>
+        <button type="button" class="btn btn-default" ng-click="delete(coffeemate._id)" ng-style="display()" ng-disabled="nouser(coffeemate)" >
+          <span class="glyphicon glyphicon-remove"></span> Remove
+        </button>
+        <button type="button" class="btn btn-default" ng-click="update(coffeemate)" ng-style="display()" ng-disabled="nouser(coffeemate)" >
+          <span class="glyphicon glyphicon-edit"></span> Edit
+        </button>
+        <button type="button" class="btn btn-default" ng-click="comment(coffeemate)"  ng-style="display()" >
+            <span class="glyphicon glyphicon-send"></span> Comment
+        </button>
+        </span>
+             </td>
+    	</tr>
+      </tbody>
+    </table>
+  </div>
+</div>

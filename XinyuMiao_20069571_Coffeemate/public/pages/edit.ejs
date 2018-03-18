@@ -1,0 +1,55 @@
+<div class="jumbotron text-center">
+    <h1>Edit Coffeemate</h1>
+
+    <p>{{ message }}</p>
+
+    <div ng-controller="editController">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+
+                <form ng-submit="updateCoffeemate()">
+                    <div class="form-group" align="center">
+                        <label>Favourite</label>
+                        <br/>
+                            <i  id="favourite-toggle" class="glyphicon glyphicon-star gi-3x favourite-true"></i>
+                        </span>
+
+                    </div>
+                    <label>Coffeemate Name</label>
+                    <div class="form-group" align="center">
+                        <input tyepe="String" ng-model="formData.name"  placeholder="Coffeemate name"  class="form-control" ng-style="{'width': 300 + 'px'}">
+                        </input>
+                        <br/>
+                        <label>Shop Name</label>
+                        <div class="form-group" align="center">
+                            <input tyepe="String" ng-model="formData.coffeeshop"  placeholder="Coffeemate shop"  class="form-control" ng-style="{'width': 300 + 'px'}">
+                            </input>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-md-offset-3">
+                            <label>Coffeemate Price</label>
+                                <input type="number"
+                                       class="form-control"
+                                       placeholder="Price"
+                                       ng-model="formData.amount"
+                                       ng-style="{'width': 100 + 'px'}"></input>
+                    </div>
+                    <div class="col-md-3">
+                            <label>Coffeemate Rating</label>
+                        <div class = rating>
+                            <div ng-init="rating = star.rating + 1"></div>
+                            <div star-rating rating-value="rating" data-max="5"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-12">
+                        <br/>
+                    <button type="submit" class="btn btn-primary">Submit the coffeemate</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,27 @@
+<div class="jumbotron text-center">
+    <h1>Comments</h1>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+              <div ng-controller="commentController">
+              <div ng-repeat="comment in comments">
+                  <div class="panel panel-info">
+                    <div class="panel panel-heading">
+                     <p><strong>"{{comment.postername}}"</strong> leaves an comment: </p>
+                    </div>
+                    <div class="panel panel-body">
+                     <h2><strong>{{comment.content}}</strong></h2>
+                     <strong>Created at : {{comment.time}}</strong>
+                        <span style="height:55px; font-size:20px; margin-left:20px; margin-right:20px; valign="middle";>
+                        <button type="button" class="btn btn-danger" ng-click="del(comment)" >
+                        <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button>
+                        </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+        </div>
+    </div>
+</div>
